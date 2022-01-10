@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reactjs-frontend
+  labels:
+    app: reactjs-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reactjs-frontend
+  template:
+    metadata:
+      labels:
+        app: reactjs-frontend
+    spec:
+      containers:
+      - image: <aws-account-id>.dkr.ecr.ap-south-1.amazonaws.com/reactjs-frontend:latest
+        imagePullPolicy: Always
+        name: reactjs-frontend
+        ports:
+        - containerPort: 3000
+          protocol: TCP

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php-backend
+  labels:
+    app: php-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: php-backend
+  template:
+    metadata:
+      labels:
+        app: php-backend
+    spec:
+      containers:
+      - image: <aws-account-id>.dkr.ecr.ap-south-1.amazonaws.com/php-backend:latest
+        imagePullPolicy: Always
+        name: php-backend
+        ports:
+        - containerPort: 80
+          protocol: TCP
