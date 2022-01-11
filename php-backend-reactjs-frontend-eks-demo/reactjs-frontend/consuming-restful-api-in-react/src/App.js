@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import env from "react-dotenv";
 import Contacts from './components/contacts';
 
 class App extends Component {
@@ -13,7 +14,8 @@ class App extends Component {
     };
 
     componentDidMount() {
-        fetch('http://jsonplaceholder.typicode.com/users')
+        console.log(env.BACKED_ENDPOINT)
+        fetch(env.BACKED_ENDPOINT)
             .then(res => res.json())
             .then((data) => {
                 this.setState({ contacts: data })
