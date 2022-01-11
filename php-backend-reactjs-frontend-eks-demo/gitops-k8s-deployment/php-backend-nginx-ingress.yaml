@@ -8,13 +8,8 @@ metadata:
       more_set_headers "strict-transport-security: max-age=63072000; includeSubDomains";
       more_set_headers "X-Frame-Options: SAMEORIGIN";
       more_set_headers "x-xss-protection: 1; mode=block";
-  name: ivue-lamp-app
+  name: php-backend-app
 spec:
-  defaultBackend:
-    service:
-      name: reactjs-frontend
-      port:
-        number: 3000
   rules:
   - http:
       paths:
