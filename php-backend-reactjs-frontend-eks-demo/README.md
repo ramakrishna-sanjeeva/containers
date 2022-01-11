@@ -14,7 +14,7 @@ To create the namespace, execute the following command.
 
     kubectl create ns php-reactjs
 
-Update the php-backend-deployment.yaml by setting the right Docker/ECR image repository URI. Deploy the back-end module. 
+All K8S resource definitions are available in folder gitops-k8s-deployment. Update the php-backend-deployment.yaml by setting the right Docker/ECR image repository URI. Deploy the back-end module. 
 
     kubectl apply -f php-backend-deployment.yaml -n php-reactjs
     kubectl apply -f php-backend-service.yaml -n php-reactjs
