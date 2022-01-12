@@ -20,4 +20,4 @@ Sample Endpoint Invocation
     
     {"c":300}
 
-Kubernetes deployment resource definitions are available in gitops-eks folder. 
+Kubernetes deployment resource definitions are available in gitops-k8s folder. 
