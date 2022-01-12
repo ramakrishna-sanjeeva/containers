@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mathservice-jep
+  labels:
+    app: mathservice-jep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mathservice-jep
+  template:
+    metadata:
+      labels:
+        app: mathservice-jep
+    spec:
+      containers:
+      - image: <AWS-Account-Id>.dkr.ecr.ap-south-1.amazonaws.com/math-service-api-jep:latest
+        imagePullPolicy: Always
+        name: mathservice-jep
+        ports:
+        - containerPort: 8080
+          protocol: TCP

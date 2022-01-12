@@ -12,10 +12,12 @@ Run the image on Docker using the following command.
 
 	docker run -p 8080:8080 math-service-api-jep
 
+Swagger endpoint will be available @ http://localhost:8080/swagger-ui.html 
+
 Sample Endpoint Invocation
 
     curl --location --request POST 'http://localhost:8080/performAddition' --header 'Content-Type: application/json' --data-raw '{"a": 100, "b": 200}'
     
     {"c":300}
 
-
+Kubernetes deployment resource definitions are available in gitops-eks folder. 

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mathservice-jep
+spec:
+  selector:
+    app: mathservice-jep
+  ports:
+   -  protocol: TCP
+      port: 8080
+      targetPort: 8080
