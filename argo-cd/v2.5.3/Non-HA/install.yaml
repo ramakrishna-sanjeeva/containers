@@ -9946,6 +9946,8 @@ spec:
       labels:
         app.kubernetes.io/name: argocd-applicationset-controller
     spec:
+      nodeSelector:
+        kubernetes.io/os: linux
       containers:
       - command:
         - entrypoint.sh
@@ -10117,6 +10119,8 @@ spec:
       labels:
         app.kubernetes.io/name: argocd-notifications-controller
     spec:
+      nodeSelector:
+        kubernetes.io/os: linux
       containers:
       - command:
         - argocd-notifications
