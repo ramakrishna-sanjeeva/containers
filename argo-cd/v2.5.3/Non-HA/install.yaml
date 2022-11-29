@@ -10016,6 +10016,8 @@ spec:
       labels:
         app.kubernetes.io/name: argocd-dex-server
     spec:
+      nodeSelector:
+        kubernetes.io/os: linux
       affinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
@@ -10174,6 +10176,8 @@ spec:
       labels:
         app.kubernetes.io/name: argocd-redis
     spec:
+      nodeSelector:
+        kubernetes.io/os: linux
       affinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
@@ -10229,6 +10233,8 @@ spec:
       labels:
         app.kubernetes.io/name: argocd-repo-server
     spec:
+      nodeSelector:
+        kubernetes.io/os: linux
       affinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
@@ -10486,6 +10492,8 @@ spec:
       labels:
         app.kubernetes.io/name: argocd-server
     spec:
+      nodeSelector:
+        kubernetes.io/os: linux
       affinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
@@ -10783,6 +10791,8 @@ spec:
       labels:
         app.kubernetes.io/name: argocd-application-controller
     spec:
+      nodeSelector:
+        kubernetes.io/os: linux
       affinity:
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
