@@ -17,4 +17,4 @@ AWS_DEFAULT_REGION - AWS region of deployment
 
 Solution Architecture Reference
 
-[![ArchitectureRef](/images/architecture.png 'Architecture Ref')]
+[![ArchitectureRef](/nginx-mtls-proxy/images/architecture.png 'Architecture Ref')]
