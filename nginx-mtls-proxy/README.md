@@ -12,8 +12,12 @@ Nginx container initialization routine expects the server, client certificates a
             server.crt
             ca.crt
 
+Container environment variables
 S3_NGINX_CONF_PATH - Path to the folder in S3 which has the certificates and configuration. Ex: S3_NGINX_CONF_PATH = s3://<S3-Bucket>/nginx-mtls-config
+
 AWS_DEFAULT_REGION - AWS region of deployment
+
+Configure ECS Task definition with the task role to list and read objects from the configured S3 bucket path. 
 
 Solution Architecture Reference
 
