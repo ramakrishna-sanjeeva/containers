@@ -1,7 +1,6 @@
-FROM nginx:1.25.1-bookworm
+FROM nginx:1.25.3-bookworm
 RUN apt-get update && apt-get install -y awscli \
  && rm -rf /var/lib/apt/lists/*
-COPY initialize.sh /initialize.sh
-RUN chmod +x /initialize.sh
-ENTRYPOINT ["/initialize.sh"]
-CMD ["nginx", "-g", "daemon off;"]
+COPY initialize.sh initialize.sh
+RUN chmod +x initialize.sh
+ENTRYPOINT ["./initialize.sh"]
